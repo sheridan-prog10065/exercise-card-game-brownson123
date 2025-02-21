@@ -112,8 +112,25 @@ public class CardGame
  /// </returns>
     private sbyte PlayRound()
     {
-       //TODO: implement play round
-       return 0;
+       //determine the card ranks for the player and house cards
+       byte houseRank = DetermineCardRank(_houseCard);
+       byte playerRank = DetermineCardRank(_playerCard);
+       
+       //check which class has the higher rank to determine the winner
+       if (playerRank > houseRank)
+       {
+          //The player won the round
+          return 1;
+       }else if (playerRank < houseRank)
+       {
+          //The house won the round
+          return -1;
+       }
+       else
+       {
+          //There was a tie
+          return 0;
+       }
     }
  
  /// <summary>
@@ -140,7 +157,6 @@ public class CardGame
 
     private void ShowRoundResult()
     {
-       
     }
 
     private void ShowGameOver()
