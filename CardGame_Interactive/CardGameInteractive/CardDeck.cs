@@ -5,5 +5,21 @@ namespace CardGameInteractive;
 /// </summary>
 public class CardDeck
 {
-    private List<Card> _cardList = new();
+    /// <summary>
+    /// List of cards in the deck
+    /// </summary>
+    private List<Card> _cardList;
+
+    public CardDeck()
+    {
+        _cardList = new List<Card>();
+    }
+
+    public int CardCount
+    {
+        get
+        {
+            return _cardList.Count;
+        }
+    }
 }

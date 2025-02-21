@@ -5,6 +5,7 @@ namespace CardGameInteractive;
 /// </summary>
 public class CardGame
 {
+   #region fields
  /// <summary>
  /// Repersents the deck of cards the game is using
  /// </summary>
@@ -18,10 +19,129 @@ public class CardGame
  /// <summary>
  /// This is the last card played by the user
  /// </summary>
-    private Card _playedCard;
+    private Card _playerCard;
 
  /// <summary>
  /// The last card played by the house
  /// </summary>
     private Card _houseCard;
+    #endregion
+   #region constructors
+ /// <summary>
+ /// The constructor of the card game class
+ /// </summary>
+    public CardGame()
+    {
+       _cardDeck = new CardDeck();
+       _score = new Score();
+       _playerCard = null;
+       _houseCard = null;
+    }
+   #endregion
+   #region properties
+   public Score Score
+   {
+      get
+      {
+         return _score;
+      }
+
+      set
+      {
+         _score = value;
+      }
+   }
+
+   public Card PlayerCard
+   {
+      get
+      {
+         return _playerCard;
+      }
+   }
+
+   public Card HouseCard
+   {
+      get
+      {
+         return _houseCard;
+      }
+   }
+
+   public bool IsOver
+   {
+      get
+      {
+         return (_cardDeck.CardCount < 2);
+      }
+   }
+
+   public bool playerWins
+   {
+      get
+      {
+         return this.IsOver && _score.PlayerScore > _score.HouseScore;
+      }
+   }
+
+   public bool HouseWins
+   {
+      get
+      {
+         return this.IsOver && _score.HouseScore > _score.PlayerScore;
+      }
+   }
+   #endregion
+   #region methods
+   
+ /// <summary>
+ /// Plays the game
+ /// </summary>
+    public void Play()
+    {
+       //TODO: implement play
+    }
+
+ /// <summary>
+ /// play a round of the game
+ /// </summary>
+ /// <returns>
+ ///     +1: The user won the round
+ ///     0: There was a tie
+ ///     -1: The house won the round
+ /// </returns>
+    private sbyte PlayRound()
+    {
+       //TODO: implement play round
+       return 0;
+    }
+ 
+ /// <summary>
+ /// Deals the cards to the player and house when a new round starts
+ /// </summary>
+    private void DealCards()
+    {
+       
+    }
+
+    private void SwitchCards()
+    {
+       
+    }
+
+    private byte DetermineCardRank()
+    {
+       return 0;
+    }
+
+    private void ShowRoundResult()
+    {
+       
+    }
+
+    private void ShowGameOver()
+    {
+       
+    }
+    #endregion
 }
