@@ -129,9 +129,18 @@ public class CardGame
        
     }
 
-    private byte DetermineCardRank()
+    /// <summary>
+    /// Determines the rank of the card as used in the game. The ace is the highest card
+    /// </summary>
+    /// <returns>The rank of the card</returns>
+    private byte DetermineCardRank(Card card)
     {
-       return 0;
+       //check of the value of the card is an ace
+       if (card.Value == 1)
+       {
+          return 14;
+       }
+       return card.Value;
     }
 
     private void ShowRoundResult()
