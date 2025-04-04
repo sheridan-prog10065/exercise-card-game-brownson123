@@ -76,13 +76,13 @@ public class Card
             switch (_suit)
             {
                 case CardSuit.Clubs:
-                    return "Club";
+                    return "Clubs";
                 case CardSuit.Diamonds:
-                    return "Diamond";
+                    return "Diamonds";
                 case CardSuit.Hearts:
-                    return "Heart";
+                    return "Hearts";
                 case CardSuit.Spades:
-                    return "Spade";
+                    return "Spades";
                 default:
                     Debug.Assert(false, "Unknown suit value, cannot return suit name");
                     return _suit.ToString();

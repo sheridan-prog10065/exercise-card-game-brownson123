@@ -15,6 +15,15 @@ public class CardDeck
     
     //define a constant that keeps track of the max card value
     private const int MAX_VALUE_COUNT = 13;
+    
+    //define a singleton randomizer object
+    private static Random s_randomizer;
+
+    static CardDeck()
+    {
+        s_randomizer = new Random();
+    }
+    
 
     public CardDeck()
     {
@@ -44,7 +53,18 @@ public class CardDeck
 
     public void ShuffleCards()
     {
-        
+        //for each car in the deck
+        for (int iCard = 0; iCard < _cardList.Count; iCard++)
+        {
+            //choose a random position in the deck
+            int randPos = s_randomizer.Next(iCard, _cardList.Count);
+            
+            //replace the current card with the card in the random position
+            Card crtCard =_cardList[iCard];
+            Card randCard = _cardList[randPos];
+            _cardList[iCard] = randCard;
+            _cardList[randPos] = crtCard;
+        }
     }
 
     public void PrintCards()
