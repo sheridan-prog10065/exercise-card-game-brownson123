@@ -67,9 +67,36 @@ public class CardDeck
         }
     }
 
-    public void PrintCards()
+    public bool GetPairOfCards(out Card cardOne, out Card cardTwo)
     {
-        
+        //check that we have enough cards for the extraction
+        if (_cardList.Count >= 2)
+        {
+            //extract the first card
+            int randPos = CardDeck.s_randomizer.Next(_cardList.Count);
+            
+            //access the card at the random index
+            cardOne = _cardList[randPos];
+            
+            //remove the card from the deck
+            _cardList.RemoveAt(randPos);
+            
+            //access the second card at the random index
+            cardTwo = _cardList[randPos];
+            
+            //remove the second card from the deck
+            _cardList.RemoveAt(randPos);
+            
+            //indicate the success of the extraction
+            return true;
+        }
+        else
+        {
+            //there are not enough cards, the game must be over
+            cardOne = null;
+            cardTwo = null;
+            return false;
+        }
     }
     public int CardCount
     {
