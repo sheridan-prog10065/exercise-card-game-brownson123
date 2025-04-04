@@ -44,7 +44,7 @@
                 IsEnabled="False"/>
 
         <!-- Game Board UI  showing the cards and notification area  -->
-        <Image x:Name="_imgPlayerCard" Grid.Row="2" Grid.Column="0"  />
+        <Image x:Name="_imgPlayerCard" Grid.Row="2" Grid.Column="0" Source="playing_card_back.jpg" />
         
         <Border Grid.Column="1" Grid.Row="2" Margin="40, 100" 
                 StrokeThickness="10"  StrokeShape="RoundRectangle 10">
@@ -54,7 +54,8 @@
         </Border>
         
         <Image x:Name="_imgHouseCard" 
-               Grid.Row="2" Grid.Column="2"/>
+               Grid.Row="2" Grid.Column="2"
+               Source="playing_card_back.jpg"/>
         
         <!-- Player / House Indicators -->
         <Label Text="Player" 
