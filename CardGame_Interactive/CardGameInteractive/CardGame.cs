@@ -155,6 +155,7 @@ public class CardGame
        return (card.Value == 1) ? (byte)14 : card.Value;
     }
 
+   
     private void ShowRoundResult()
     {
     }
