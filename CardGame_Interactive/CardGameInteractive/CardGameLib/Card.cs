@@ -1,7 +1,7 @@
 
 using System.Diagnostics;
 
-namespace CardGameInteractive;
+namespace CardGameLib;
 
 /// <summary>
 /// Defines the cards in the card game with its value and suit

@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace CardGameInteractive;
+namespace CardGameLib;
 
 /// <summary>
 /// Defines the card game that implements the game logic anf holds the card deck

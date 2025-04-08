@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
+using CardGameLib;
 
-namespace CardGameInteractive;
+namespace CardGameApp;
 
 public partial class MainPage : ContentPage
 {

@@ -1,5 +1,4 @@
-namespace CardGameInteractive;
-
+namespace CardGameLib;
 /// <summary>
 /// Defines the score of the game
 /// </summary>
