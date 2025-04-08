@@ -105,4 +105,10 @@ public class CardDeck
             return _cardList.Count;
         }
     }
+
+    public void ExchangeCards(ref Card cardOne, ref Card cardTwo)
+    {
+        //swap both cards using tuple deconstruction
+        (cardOne, cardTwo) = (cardTwo, cardOne);
+    }
 }

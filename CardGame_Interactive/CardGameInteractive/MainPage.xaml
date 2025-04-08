@@ -12,7 +12,7 @@
                 HorizontalOptions="Start" VerticalOptions="Center" 
                 HeightRequest="104" WidthRequest="124" 
                 Stroke="#FF948E8E" StrokeThickness="3" StrokeShape="RoundRectangle 2" >
-            <Label x:Name="_txtPlayerScore" LineBreakMode="WordWrap" Text="15" FontSize="72" HorizontalTextAlignment="Center"/>
+            <Label x:Name="_txtPlayerScore" LineBreakMode="WordWrap" Text="0" FontSize="72" HorizontalTextAlignment="Center"/>
         </Border>
 
         <Label Grid.Row="0" Grid.Column="1" 
@@ -24,7 +24,7 @@
                 HorizontalOptions="End" VerticalOptions="Center" 
                 HeightRequest="104" WidthRequest="124" 
                 Stroke="#FF948E8E" StrokeThickness="3" StrokeShape="RoundRectangle 2"  >
-            <Label x:Name="_txtHouseScore" LineBreakMode="WordWrap" Text="4" FontSize="72" HorizontalTextAlignment="Center"/>
+            <Label x:Name="_txtHouseScore" LineBreakMode="WordWrap" Text="0" FontSize="72" HorizontalTextAlignment="Center"/>
         </Border>
         
         <!-- Game Control Buttons -->
